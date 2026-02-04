@@ -7,6 +7,7 @@ import Countdown from './components/Countdown';
 import WeddingGift from './components/WeddingGift';
 import Gallery from './components/Gallery';
 import Guestbook from './components/Guestbook';
+import StoryTimeline from './components/StoryTimeline';
 
 // --- STYLISTIC COMPONENTS ---
 
@@ -347,11 +348,15 @@ const App: React.FC = () => {
               </div>
               <div className="text-center mb-16 sm:mb-24 space-y-6">
                 <InkSpreadTitle>
-                  <h2 className="font-serif text-5xl sm:text-7xl text-[#3D5A80] font-bold">Galeri Cerita</h2>
+                  <div className="text-center mb-16 space-y-4">
+                    <h2 className="font-cursive text-6xl sm:text-8xl text-[#3D5A80]">Our Story</h2>
+                    <p className="text-[#4A6982] tracking-widest uppercase text-xs font-bold opacity-60">Perjalanan kisah cinta kami</p>
+                  </div>
                 </InkSpreadTitle>
                 <div className="w-32 h-px bg-[#3D5A80]/20 mx-auto" />
               </div>
               <Gallery />
+              <StoryTimeline />
             </section>
 
             {/* WEDDING GIFT SECTION - Tighter top spacing */}
