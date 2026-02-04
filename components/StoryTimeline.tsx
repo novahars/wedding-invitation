@@ -12,24 +12,24 @@ interface StoryEvent {
 
 const stories: StoryEvent[] = [
   {
-    date: "31 Januari 2021",
+    date: "24 July 2025",
     title: "*Nazhor & Taaruf*",
-    description: "Saat itu kami memulai perkenalan dari media taaruf dan merasa ada kecocokan akhir memutuskan untuk nadzor.",
-    image: "/img/story1.png",
+    description: "Takdir mempertemukan Bilal dan Sandika pada 24 Juli 2025, dalam ruang kerja dan niat yang sederhana. Sebuah pertemuan singkat yang berlalu, hingga waktu kembali mempertemukan mereka pada 16 Oktober 2025, melalui satu pekerjaan dan satu kesempatan.",
+    image: "/img/story1.webp",
     color: "#3D5A80" // Dark Blue
   },
   {
-    date: "31 Maret 2021",
+    date: "3 November 2025",
     title: "*Khitbah*",
-    description: "Dengan berbagai pertimbangan yang matang dan mengharap ridho Allah azza wa jalla, akhirnya khitbah menjadi jalan kami untuk menuju jenjang yang lebih serius.",
-    image: "/img/story2.png",
+    description: "Dari komunikasi yang awalnya profesional, tumbuh rasa yang menguatkan. Pada 3 November 2025, Bilal menyampaikan niatnya untuk melangkah lebih jauh, dengan restu orang tua sebagai landasan.",
+    image: "/img/story2.webp",
     color: "#F4C430" // Yellow/Amber
   },
   {
-    date: "12 Desember 2021",
+    date: "30 Januari 2025",
     title: "*Akad & Resepsi*",
-    description: "Semoga ini menjadi jalan terbaik yang Allah tetapkan untuk menggapai ridhonya.",
-    image: "/img/story3.png",
+    description: "Dengan izin Allah dan doa keluarga, lamaran pun terucap pada 30 Januari 2026. Hingga akhirnya, pada 15 Februari 2026, mereka memilih untuk berjalan bersama dalam ikatan suci pernikahan—menyatukan dua hati, dalam satu tujuan.",
+    image: "/img/story3.webp",
     color: "#D65A6F" // Red/Pink
   }
 ];
@@ -72,7 +72,7 @@ const StoryTimeline: React.FC = () => {
                       <img
                         src={story.image}
                         alt={story.title}
-                        className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover scale-125 p-4"
                         onError={(e) => {
                           (e.target as HTMLImageElement).src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${index}&backgroundColor=b6e3f4`;
                         }}

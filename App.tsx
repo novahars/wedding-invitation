@@ -57,8 +57,8 @@ const App: React.FC = () => {
   const [isOpened, setIsOpened] = useState(false);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
-  const brideImg = '/img/Bride.jpg';
-  const groomImg = '/img/Groom.jpg';
+  const brideImg = '/img/Bride.webp';
+  const groomImg = '/img/Groom.webp';
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -165,12 +165,7 @@ const App: React.FC = () => {
 
       {isOpened && (
         <>
-          <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden watercolor-wash-hide-mobile">
-            <WatercolorWash className="-top-40 -left-40" size="800px" color="#98C1D9" opacity={0.15} />
-            <WatercolorWash className="top-1/3 -right-40" size="600px" color="#E0E7FF" opacity={0.2} delay={1} />
-            <WatercolorWash className="bottom-0 left-1/4" size="900px" color="#F2F0E9" opacity={0.3} delay={2} />
-            <WatercolorWash className="bottom-20 right-1/4" size="500px" color="#3D5A80" opacity={0.05} />
-          </div>
+
 
           <button
             onClick={toggleMusic}
@@ -234,9 +229,7 @@ const App: React.FC = () => {
 
             {/* PROFILE */}
             <section className="py-24 sm:py-48 px-6 relative overflow-hidden bg-white/10 backdrop-blur-[1px]">
-              <div className="watercolor-wash-hide-mobile">
-                <WatercolorWash className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" size="1000px" color="#FAF9F6" opacity={0.5} />
-              </div>
+
               <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-32 relative">
                 <motion.div
                   whileInView={{ opacity: 1, y: 0 }}
@@ -244,12 +237,15 @@ const App: React.FC = () => {
                   viewport={{ once: true }}
                   className="text-center space-y-12 group"
                 >
-                  <div className="relative inline-block">
-                    <div className="watercolor-wash-hide-mobile">
-                      <WatercolorWash className="-top-12 -right-12" size="250px" color="#98C1D9" opacity={0.3} />
+                  <div className="relative inline-block  ">
+                    <div className="absolute top-0 left-0 w-full h-full">
+                      {/* Contoh SVG Blob (warna diatur via 'fill' atau kelas Tailwind jika dikonfigurasi) */}
+                      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute top-[-50px] left-[-70px] w-[120%] h-[120%]">
+                        <path fill="#e5e7eb" d="M43.7,-64.5C53.7,-52.1,56.7,-37.2,60.8,-22.3C64.9,-7.5,70.1,7.3,65.8,20.4C61.4,33.4,47.5,44.7,33.5,52.2C19.5,59.7,5.4,63.4,-8.3,61C-22.1,58.6,-35.5,50.1,-46.8,38.8C-58.1,27.5,-67.2,13.4,-67.1,-0.8C-67,-15.1,-57.8,-29.4,-46.2,-41.8C-34.6,-54.2,-20.6,-64.7,-4.8,-62.9C11,-61.2,26.9,-57.2,43.7,-64.5Z" transform="translate(100 100)" />
+                      </svg>
                     </div>
-                    <div className="w-64 h-64 sm:w-80 sm:h-80 mx-auto overflow-hidden shadow-2xl relative z-10 watercolor-frame bg-white/80 p-2 backdrop-blur-sm">
-                      <img src={brideImg} className="w-full h-full object-cover transition-all duration-1000 grayscale-[20%] group-hover:grayscale-0 group-hover:scale-110" alt="Bride" />
+                    <div className="w-64 h-64  sm:w-80 sm:h-80 mx-auto overflow-hidden shadow-2xl relative z-10 watercolor-frame bg-white/80 p-2 backdrop-blur-sm">
+                      <img src={brideImg} className="w-full h-full object-cover md:pr-5 md:ml-3 md:mt-3 pr-5 ml-3 mt-3" alt="Bride" />
                     </div>
                   </div>
                   <div className="space-y-4">
@@ -268,11 +264,11 @@ const App: React.FC = () => {
                   className="text-center space-y-12 group"
                 >
                   <div className="relative inline-block">
-                    <div className="watercolor-wash-hide-mobile">
-                      <WatercolorWash className="-top-12 -left-12" size="250px" color="#3D5A80" opacity={0.2} />
-                    </div>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute top-[-40px] right-[0px] left-[0px] w-[120%] h-[120%]">
+                      <path fill="#e5e7eb" d="M43.7,-64.5C53.7,-52.1,56.7,-37.2,60.8,-22.3C64.9,-7.5,70.1,7.3,65.8,20.4C61.4,33.4,47.5,44.7,33.5,52.2C19.5,59.7,5.4,63.4,-8.3,61C-22.1,58.6,-35.5,50.1,-46.8,38.8C-58.1,27.5,-67.2,13.4,-67.1,-0.8C-67,-15.1,-57.8,-29.4,-46.2,-41.8C-34.6,-54.2,-20.6,-64.7,-4.8,-62.9C11,-61.2,26.9,-57.2,43.7,-64.5Z" transform="translate(100 100)" />
+                    </svg>
                     <div className="w-64 h-64 sm:w-80 sm:h-80 mx-auto overflow-hidden shadow-2xl relative z-10 watercolor-frame bg-white/80 p-2 backdrop-blur-sm">
-                      <img src={groomImg} className="w-full h-full object-cover transition-all duration-1000 grayscale-[20%] group-hover:grayscale-0 group-hover:scale-110" alt="Groom" />
+                      <img src={groomImg} className="w-full h-full object-cover" alt="Groom" />
                     </div>
                   </div>
                   <div className="space-y-4">
@@ -287,9 +283,7 @@ const App: React.FC = () => {
 
             {/* DETAILS */}
             <section className="py-24 sm:py-48 px-6 relative bg-[#FAF9F6]/20">
-              <div className="watercolor-wash-hide-mobile">
-                <WatercolorWash className="top-0 right-0" size="600px" color="#E0E7FF" opacity={0.15} />
-              </div>
+              
               <div className="max-w-5xl mx-auto text-center space-y-24 relative z-10">
                 <div className="space-y-6">
                   <InkSpreadTitle>
@@ -308,7 +302,7 @@ const App: React.FC = () => {
                     <h4 className="font-serif text-3xl sm:text-4xl text-[#3D5A80] font-bold mb-6">Akad Nikah</h4>
                     <div className="space-y-2">
                       <p className="text-[#3D5A80] text-2xl sm:text-3xl font-serif">08:00 - 10:00 WIB</p>
-                      <p className="text-[#4A6982] font-medium text-lg leading-relaxed">Masjid Islam Al Azhar 2<br />Pejaten, Jakarta Selatan</p>
+                      <p className="text-[#4A6982] font-medium text-lg leading-relaxed">GOR Pasar Minggu<br />Gelanggang Remaja Kecamatan Pasar Minggu</p>
                     </div>
                   </div>
 
@@ -316,8 +310,8 @@ const App: React.FC = () => {
                     <Heart className="mx-auto text-[#98C1D9] opacity-40 mb-8" size={60} />
                     <h4 className="font-serif text-3xl sm:text-4xl text-[#3D5A80] font-bold mb-6">Resepsi</h4>
                     <div className="space-y-2">
-                      <p className="text-[#3D5A80] text-2xl sm:text-3xl font-serif">10:00 - Selesai</p>
-                      <p className="text-[#4A6982] font-medium text-lg leading-relaxed">Masjid Islam Al Azhar 2<br />Pejaten, Jakarta Selatan</p>
+                      <p className="text-[#3D5A80] text-2xl sm:text-3xl font-serif">11:00 - 14:00 WIB</p>
+                      <p className="text-[#4A6982] font-medium text-lg leading-relaxed">GOR Pasar Minggu<br />Gelanggang Remaja Kecamatan Pasar Minggu</p>
                     </div>
                   </div>
                 </div>
@@ -325,13 +319,13 @@ const App: React.FC = () => {
                 <div className="mt-20 space-y-12">
                   <div className="w-full h-[400px] sm:h-[600px] rounded-[3rem] sm:rounded-[4rem] overflow-hidden shadow-2xl border-[8px] sm:border-[12px] border-white group relative">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9540179913383!2d106.83267742695308!3d-6.269777799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f367827983c7%3A0xc33c73a674ff7867!2sSMA%20Islam%20Al%20Azhar%202%20Pejaten!5e0!3m2!1sen!2sid!4v1770165785275!5m2!1sen!2sid"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8385806551883!2d106.83740159999999!3d-6.2849389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f213b9a1b9db%3A0x35951e9783a0f5a6!2sGOR%20Pasar%20Minggu!5e0!3m2!1sen!2sid!4v1770216762593!5m2!1sen!2sid"
                       width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
                       className="group-hover:scale-105 transition-transform duration-[4000ms]"
                     />
                   </div>
                   <button
-                    onClick={() => window.open('https://share.google/hh0mvFwUvipQdulhU')}
+                    onClick={() => window.open('https://maps.app.goo.gl/NzLKRNbFaNQiBXVn8')}
                     className="bg-[#3D5A80] text-white px-10 sm:px-16 py-5 sm:py-7 rounded-full flex items-center gap-4 mx-auto shadow-2xl hover:bg-[#293241] transition-all font-bold group text-lg sm:text-xl"
                   >
                     <Navigation size={24} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -343,17 +337,14 @@ const App: React.FC = () => {
 
             {/* GALLERY */}
             <section className="pt-24 sm:pt-48 pb-12 sm:pb-20 relative">
-              <div className="watercolor-wash-hide-mobile">
-                <WatercolorWash className="top-1/4 left-0" size="450px" color="#98C1D9" opacity={0.06} />
-              </div>
-              <div className="text-center mb-16 sm:mb-24 space-y-6">
+            
+              <div className="text-center  space-y-6">
                 <InkSpreadTitle>
                   <div className="text-center mb-16 space-y-4">
                     <h2 className="font-cursive text-6xl sm:text-8xl text-[#3D5A80]">Our Story</h2>
                     <p className="text-[#4A6982] tracking-widest uppercase text-xs font-bold opacity-60">Perjalanan kisah cinta kami</p>
                   </div>
                 </InkSpreadTitle>
-                <div className="w-32 h-px bg-[#3D5A80]/20 mx-auto" />
               </div>
               <Gallery />
               <StoryTimeline />
@@ -361,9 +352,7 @@ const App: React.FC = () => {
 
             {/* WEDDING GIFT SECTION - Tighter top spacing */}
             <section className="pt-12 sm:pt-20 pb-24 sm:pb-32 px-6 relative overflow-hidden">
-              <div className="watercolor-wash-hide-mobile">
-                <WatercolorWash className="-bottom-40 -left-40" size="800px" color="#3D5A80" opacity={0.08} />
-              </div>
+            
               <div className="max-w-4xl mx-auto space-y-24 sm:space-y-32 relative z-10">
                 <WeddingGift />
                 <div className="space-y-16">

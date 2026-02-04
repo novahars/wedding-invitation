@@ -49,7 +49,7 @@ const Gallery: React.FC = () => {
             <img
               src={item.src}
               alt={`Our Love Story ${index + 1}`}
-              className={`w-full h-full object-cover ${item.position} transition-transform duration-1000 ease-out group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0`}
+              className={`w-full h-full object-cover ${item.position}`}
               loading="lazy"
             />
           </div>
