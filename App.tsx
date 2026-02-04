@@ -5,7 +5,6 @@ import { Heart, Volume2, VolumeX, Navigation, ChevronDown, Calendar } from 'luci
 import Envelope from './components/Envelope';
 import Countdown from './components/Countdown';
 import WeddingGift from './components/WeddingGift';
-import Gallery from './components/Gallery';
 import Guestbook from './components/Guestbook';
 import StoryTimeline from './components/StoryTimeline';
 
@@ -346,7 +345,6 @@ const App: React.FC = () => {
                   </div>
                 </InkSpreadTitle>
               </div>
-              <Gallery />
               <StoryTimeline />
             </section>
 
