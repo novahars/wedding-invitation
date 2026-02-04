@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 
 const localImages = [
-  { src: "/img/gallery1.webp", position: "object-top" },
+  { src: "/public/img/gallery1.webp", position: "object-top" },
   { src: "/img/gallery2.webp", position: "object-left pr-9 mr-15 mt-10 " }, // Fokus tengah default
   { src: "/img/gallery3.webp", position: "object-center pl-3 " }, // Potong bagian atas
   { src: "/img/gallery41.webp", position: "object-center pr-8" },
