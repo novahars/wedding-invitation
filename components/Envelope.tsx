@@ -111,7 +111,11 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
             </div>
           )}
         </div>
-     
+        <div className="mt-10 p-10 px-5">
+          <div className="mt-8   space-y-1">
+            <p className="mt-10 text-[10px] text-[#3D5A80]/40 uppercase tracking-[0.4em] font-bold text-center">Special Invitation For You</p>
+          </div>
+        </div>
 
       </div>
     </motion.div>
